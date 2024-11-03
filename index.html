@@ -8,21 +8,31 @@
         body {
             font-family: Arial, sans-serif;
             background-image: url('./pic/ezgif-6-9d62d37c4a.jpg');
-            background-size: contain;
+            background-size: contain; /* Resize the image to cover the entire header */
             background-repeat: no-repeat;
-            margin: 0;
-            padding: 0;
+            padding: 2em;
+            margin: 2em auto; /* Center the content */
             background-color: #f4f4f4;
+            background-attachment: fixed;
+            background-position: center;
         }
         header {
-            background-color: rgba(0, 0, 0, 0.5); /* Adjusted to match the background picture */
             background-size: 100% 100%; /* Resize the image to cover the entire header */
-            color: white;
+            color: #35415C;
             padding: 1em 0;
             text-align: center;
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
         }
         main {
             padding: 2em;
+            background-color: rgba(255, 255, 255, 0.8); /* Add a semi-transparent background to make text readable */
+            margin: 2em auto; /* Center the content */
+            max-width: 800px; /* Limit the width of the content */
+            border-radius: 10px; /* Add rounded corners */
         }
         footer {
             background-color: #333;
