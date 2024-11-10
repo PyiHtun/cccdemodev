@@ -47,12 +47,5 @@ _site/
 # Coverage directories (used by test frameworks)
 coverage/
 
-# Generated images or other media (optional, depending on your setup)
-*.png
-*.jpg
-*.jpeg
-*.gif
-*.svg
-
 # Other custom files you might want to ignore
 *.env
