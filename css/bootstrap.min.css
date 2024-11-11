@@ -1326,6 +1326,15 @@ pre code {
     }
 }
 
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    .header .logo {
+        height: 60%;
+        width: 80%;
+        margin: 0 auto; /* Optional: Center the logo */
+    }
+}
+
 @media (min-width:992px) {
     .col-lg {
         -ms-flex-preferred-size: 0;
