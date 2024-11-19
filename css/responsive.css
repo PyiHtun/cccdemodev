@@ -1299,10 +1299,130 @@ Version:	1.1
 .footer .footer-top {
 	padding: 65px 0px;
 }
+}
+
+@media only screen and (max-width: 767px) {
+	/* Hide SlickNav for mobile */
+	.slicknav_menu {
+			display: none;
+	}
+
+	/* Center and resize the logo */
+	.logo {
+			display: block;
+			text-align: center; /* Center the logo for mobile */
+			margin: 0 auto; /* Center horizontally */
+			padding: 20px 0; /* Add some space around the logo */
+	}
+
+	.logo img {
+			max-width: 100px; /* Reduce size for mobile screens */
+			height: auto;
+	}
+
+	/* Center content inside the header */
+	.header-inner {
+			text-align: center; /* Ensure no misalignment */
+	}
+
+	/* Mobile Menu Styles */
+	.mobile-menu {
+			background-color: #1A76D1; /* Replace with the exact color from ccc-middle-dot-8.png */
+			color: white;
+			padding: 10px;
+	}
+
+	.menu-toggle {
+			background-color: #1A76D1; /* Same as above */
+			color: white;
+			padding: 12px;
+			font-size: 16px;
+			border: none;
+			cursor: pointer;
+			width: 100%;
+			text-align: left;
+	}
+
+	.menu-toggle:hover {
+			background-color: #144A8C; /* Slightly darker for hover effect */
+	}
+
+	.mobile-menu-list {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			display: none; /* Initially hidden */
+	}
+
+	.mobile-menu-list li {
+			border-bottom: 1px solid #ddd;
+			position: relative; /* Needed for submenu indicator positioning */
+			cursor: pointer; /* Entire bar clickable */
+	}
+
+	.mobile-menu-list li:last-child {
+			border-bottom: none; /* Remove divider for the last main menu item */
+	}
+
+	.mobile-menu-list a {
+			text-decoration: none;
+			color: white;
+			display: block;
+			padding: 10px 15px;
+			width: 100%; /* Ensure full-width clickable area */
+	}
+
+	.mobile-menu-list a:hover {
+			background-color: #144A8C;
+	}
+
+	/* Submenu Styles */
+	.mobile-submenu {
+			list-style: none;
+			margin: 0;
+			padding: 0 15px; /* Indent for submenu items */
+			display: none; /* Initially hidden */
+	}
+
+	.mobile-submenu li {
+			border-bottom: 1px solid #ddd;
+	}
+
+	.mobile-submenu li:last-child {
+			border-bottom: none; /* Remove divider for the last submenu item */
+	}
+
+	.mobile-submenu li a {
+			font-size: 14px;
+	}
+
+	.mobile-menu-list li.open > .mobile-submenu {
+			display: block; /* Show submenu when open */
+	}
+
+	/* Submenu Indicator Styles */
+	.submenu-indicator {
+			float: right;
+			font-size: 18px;
+			color: white;
+			cursor: pointer;
+			line-height: 100%; /* Align vertically with text */
+	}
+
+	/* Styling for open state */
+	.mobile-menu-list li.open > .submenu-indicator {
+			transform: rotate(45deg); /* Rotate the indicator to show submenu is open */
+	}
+
+	.mobile-menu-list > li > a {
+			display: inline-block;
+			width: calc(100% - 30px); /* Leave space for the indicator */
+	}
+}
 
 
-
-
-
-
+@media only screen and (min-width: 768px) {
+	.mobile-menu {
+			display: none;
+	}
 }

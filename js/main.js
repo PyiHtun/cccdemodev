@@ -69,11 +69,40 @@ Version:	1.1
 		/*====================================
 			Mobile Menu
 		======================================*/ 	
-		$('.menu').slicknav({
-			prependTo:".mobile-nav",
-			duration: 300,
-			closeOnClick:true,
+		// $('.menu').slicknav({
+		// 	prependTo:".mobile-nav",
+		// 	duration: 300,
+		// 	closeOnClick:true,
+		// });
+
+
+		// Toggle main menu
+		$('.menu-toggle').on('click', function () {
+				$('.mobile-menu-list').slideToggle(300); // Toggle menu visibility
 		});
+
+
+		$('.mobile-menu-list > li').on('click', function (e) {
+			var submenu = $(this).find('.mobile-submenu').first();
+			if (submenu.length) {
+					e.preventDefault(); // Prevent navigation
+					submenu.slideToggle(300); // Toggle submenu visibility
+					$(this).toggleClass('open'); // Add 'open' class for styling
+			}
+	});
+		
+
+	// 	 // Toggle main menu
+	// 	 $('.menu-toggle').on('click', function () {
+	// 		$('.mobile-menu-list').slideToggle(300);
+	// });
+
+	// // Toggle submenus and update the indicator
+	// $('.submenu-indicator').on('click', function (e) {
+	// 		e.preventDefault(); // Prevent link navigation
+	// 		$(this).toggleClass('open'); // Rotate the indicator
+	// 		$(this).siblings('.mobile-submenu').slideToggle(300); // Toggle the submenu
+	// });
 		
 		/*===============================
 			Hero Slider JS
