@@ -1307,19 +1307,6 @@ Version:	1.1
 			display: none;
 	}
 
-	/* Center and resize the logo */
-	.logo {
-			display: block;
-			text-align: center; /* Center the logo for mobile */
-			margin: 0 auto; /* Center horizontally */
-			padding: 20px 0; /* Add some space around the logo */
-	}
-
-	.logo img {
-			max-width: 100px; /* Reduce size for mobile screens */
-			height: auto;
-	}
-
 	/* Center content inside the header */
 	.header-inner {
 			text-align: center; /* Ensure no misalignment */
@@ -1331,7 +1318,7 @@ Version:	1.1
 			color: white;
 			padding: 10px;
 	}
-
+		
 	.menu-toggle {
 			background-color: #1A76D1; /* Same as above */
 			color: white;
