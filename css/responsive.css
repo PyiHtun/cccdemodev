@@ -387,14 +387,13 @@ Version:	1.1
 	left:0;
 	bottom:initial;
 }
-.header .header-inner {
+/* .header .header-inner {
 	width: 100%;
 	z-index: 333;
 	position: absolute;
 	position: relative;
-	padding-bottom: 20px;
 	background: #fff;
-}
+} */
 .slicknav_menu{
 	display:block;
 }
@@ -1301,26 +1300,42 @@ Version:	1.1
 }
 }
 
+/* General Mobile Styles */
 @media only screen and (max-width: 767px) {
-	/* Hide SlickNav for mobile */
-	.slicknav_menu {
-			display: none;
+
+	/* Header Inner with Mobile Menu */
+	.header .header-inner {
+			display: flex;
+			justify-content: center; /* Center the logo */
+			align-items: center; /* Align logo vertically */
+			background: #fff;
+			width: 100%;
+			z-index: 1010;
+			position: relative; /* Needed for menu positioning */
 	}
 
-	/* Center content inside the header */
-	.header-inner {
-			text-align: center; /* Ensure no misalignment */
+    /* Center the Logo in Header */
+    .header .logo {
+			float: none; /* Disable float for mobile view */
+			margin: 5px auto; /* Center horizontally */
+			display: block;
+			text-align: center;
 	}
 
 	/* Mobile Menu Styles */
-	.mobile-menu {
-			background-color: #1A76D1; /* Replace with the exact color from ccc-middle-dot-8.png */
-			color: white;
-			padding: 10px;
+	.header .mobile-menu {
+			position: absolute; /* Aligns menu relative to header-inner */
+			top: 100%; /* Place menu below header-inner */
+			left: 0;
+			width: 100%; /* Full width for mobile menu */
+			background: #1A76D1; /* Background color */
+			z-index: 1000;
+			box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
 	}
-		
+
+	/* Toggle Button */
 	.menu-toggle {
-			background-color: #1A76D1; /* Same as above */
+			background-color: #1A76D1;
 			color: white;
 			padding: 12px;
 			font-size: 16px;
@@ -1331,44 +1346,57 @@ Version:	1.1
 	}
 
 	.menu-toggle:hover {
-			background-color: #144A8C; /* Slightly darker for hover effect */
+			background-color: #144A8C; /* Slightly darker on hover */
 	}
 
+	/* Mobile Menu List (Collapsed by Default) */
 	.mobile-menu-list {
 			list-style: none;
 			padding: 0;
 			margin: 0;
-			display: none; /* Initially hidden */
+			display: none; /* Hidden by default */
+	}
+
+	/* Show Menu When Needed */
+	.mobile-menu-list.show {
+			display: block; /* Shown when active */
 	}
 
 	.mobile-menu-list li {
 			border-bottom: 1px solid #ddd;
-			position: relative; /* Needed for submenu indicator positioning */
-			cursor: pointer; /* Entire bar clickable */
 	}
 
 	.mobile-menu-list li:last-child {
-			border-bottom: none; /* Remove divider for the last main menu item */
+			border-bottom: none; /* Remove bottom border from the last item */
 	}
 
 	.mobile-menu-list a {
+			display: block; /* Simple block-level links */
 			text-decoration: none;
 			color: white;
-			display: block;
 			padding: 10px 15px;
-			width: 100%; /* Ensure full-width clickable area */
+			font-size: 14px;
 	}
 
 	.mobile-menu-list a:hover {
-			background-color: #144A8C;
+			background-color: #144A8C; /* Slightly darker on hover */
 	}
 
-	/* Submenu Styles */
+	/* Remove Expandable Indicator */
+	.submenu-indicator {
+			display: none; /* Hide the "+" completely */
+	}
+
+	/* Expandable Submenu (Collapsed by Default) */
 	.mobile-submenu {
 			list-style: none;
 			margin: 0;
 			padding: 0 15px; /* Indent for submenu items */
-			display: none; /* Initially hidden */
+			display: none; /* Hidden by default */
+	}
+
+	.mobile-menu-list li.open > .mobile-submenu {
+			display: block; /* Show submenu when open */
 	}
 
 	.mobile-submenu li {
@@ -1376,37 +1404,14 @@ Version:	1.1
 	}
 
 	.mobile-submenu li:last-child {
-			border-bottom: none; /* Remove divider for the last submenu item */
+			border-bottom: none; /* No border for the last item */
 	}
 
 	.mobile-submenu li a {
 			font-size: 14px;
-	}
-
-	.mobile-menu-list li.open > .mobile-submenu {
-			display: block; /* Show submenu when open */
-	}
-
-	/* Submenu Indicator Styles */
-	.submenu-indicator {
-			float: right;
-			font-size: 18px;
-			color: white;
-			cursor: pointer;
-			line-height: 100%; /* Align vertically with text */
-	}
-
-	/* Styling for open state */
-	.mobile-menu-list li.open > .submenu-indicator {
-			transform: rotate(45deg); /* Rotate the indicator to show submenu is open */
-	}
-
-	.mobile-menu-list > li > a {
-			display: inline-block;
-			width: calc(100% - 30px); /* Leave space for the indicator */
+			padding: 10px 15px;
 	}
 }
-
 
 @media only screen and (min-width: 768px) {
 	.mobile-menu {
