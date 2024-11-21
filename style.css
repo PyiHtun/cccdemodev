@@ -593,14 +593,32 @@ body{
 	Start Hero Area CSS
 =============================*/
 .slider .single-slider {
+	position: relative;
 	height: 600px;
 	background-size: cover;
 	background-position: center;
-	background-repeat:no-repeat;
+	background-repeat: no-repeat;
 }
-.slider .single-slider .text{
-	margin-top:120px;
+
+.slider .single-slider::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(249, 247, 247, 0.4); /* Semi-transparent overlay */
+	z-index: 1; /* Place it below the text */
 }
+
+.slider .single-slider .text {
+	position: relative;
+	z-index: 2; /* Place text above the overlay */
+	margin-top: 120px;
+	color: #fff; /* Ensure text is readable */
+}
+
+
 .slider.index2 .single-slider .text{
 	margin-top:150px;
 }

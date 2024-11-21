@@ -1303,6 +1303,15 @@ Version:	1.1
 /* General Mobile Styles */
 @media only screen and (max-width: 767px) {
 
+		/* Hide SlickNav for mobile */
+		.slicknav_menu {
+			display: none;
+	}
+
+	.slider .single-slider {
+		margin-top:40px;
+	}
+
 	/* Header Inner with Mobile Menu */
 	.header .header-inner {
 			display: flex;
