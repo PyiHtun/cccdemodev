@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Execute reCAPTCHA v3
         grecaptcha.ready(function () {
-            grecaptcha.execute("YOUR_SITE_KEY", { action: "submit" }).then(function (token) {
+            grecaptcha.execute("6Ld2JosqAAAAANG1NxQ8s7t8ZiUyoHIhvUTpEFj_", { action: "submit" }).then(function (token) {
                 // Append reCAPTCHA token to the form
                 const formData = new FormData(contactForm);
                 formData.append("g-recaptcha-response", token);
