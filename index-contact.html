@@ -43,7 +43,10 @@
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="css/responsive.css">
 		
-		<script src="https://www.google.com/recaptcha/api.js?render=6Ld2JosqAAAAANG1NxQ8s7t8ZiUyoHIhvUTpEFj_"></script>
+		<!-- <script src="https://www.google.com/recaptcha/api.js?render=6Ld2JosqAAAAANG1NxQ8s7t8ZiUyoHIhvUTpEFj_"></script> -->
+
+		<!-- Add reCAPTCHA v2 script -->
+		<!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
 
     </head>
     <body>
@@ -198,27 +201,29 @@
 									<h2>Contact With Us</h2>
 									<p>If you have any questions please feel free to contact with us.</p>
 									<!-- Form -->
-									<form id="contact-form" method="post">
-										<div class="form-group">
-												<label for="full-name">Full Name</label>
-												<input type="text" id="full-name" name="name" placeholder="Enter your full name" required>
-										</div>
-										<div class="form-group">
-												<label for="email">Email</label>
-												<input type="email" id="email" name="email" placeholder="Enter your email" required>
-										</div>
-										<div class="form-group">
-												<label for="contact-number">Contact Number (Optional)</label>
-												<input type="tel" id="contact-number" name="contact" placeholder="Enter your contact number">
-										</div>
-										<div class="form-group">
-												<label for="message">Message</label>
-												<textarea id="message" name="message" placeholder="Write your message here..." rows="5" required></textarea>
-										</div>
-										<button type="submit" class="btn">Send Message</button>
-								</form>
+									<form id="contact-form">
+											<div class="form-group">
+													<label for="full-name">Full Name</label>
+													<input type="text" id="full-name" name="name" placeholder="Enter your full name" required>
+											</div>
+											<div class="form-group">
+													<label for="email">Email</label>
+													<input type="email" id="email" name="email" placeholder="Enter your email" required>
+											</div>
+											<div class="form-group">
+													<label for="contact-number">Contact Number (Optional)</label>
+													<input type="tel" id="contact-number" name="contact" placeholder="Enter your contact number">
+											</div>
+											<div class="form-group">
+													<label for="message">Message</label>
+													<textarea id="message" name="message" placeholder="Write your message here..." rows="5" required></textarea>
+											</div>
+											<!-- reCAPTCHA widget -->
+											<!-- <div class="g-recaptcha" data-sitekey="6Ld2JosqAAAAANG1NxQ8s7t8ZiUyoHIhvUTpEFj_"></div> -->
+											<button type="submit" class="btn">Send Message</button>
+									</form>
 									<!--/ End Form -->
-								</div>
+								</div>	
 							</div>
 						</div>
 					</div>
